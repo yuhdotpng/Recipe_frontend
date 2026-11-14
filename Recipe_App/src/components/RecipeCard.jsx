@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useWatchlist } from '../contexts/MovieContext';
+import { useCookList } from '../contexts/RecipeContext';
+import './RecipeCard.css';
 
 function RecipeCard({ recipe }) {
 
@@ -26,14 +27,14 @@ function RecipeCard({ recipe }) {
     }
   };
 
-  const {addToWatchlist, removeFromWatchlist, isInWatchlist} = useWatchlist();
-  const inWatchlist = isInWatchlist(recipe.id);
+  const {addToCookList, removeFromCookList, isInCookList} = useCookList();
+  const inCookList = isInCookList(recipe.id);
 
-  const handleWatchlistClick= () => {
-    if (inWatchlist) {
-      removeFromWatchlist(recipe.id);
+  const handleCookListClick= () => {
+    if (inCookList) {
+      removeFromCookList(recipe.id);
     } else {
-      addToWatchlist(recipe);
+      addToCookList(recipe);
     }
   };
 
@@ -41,23 +42,23 @@ function RecipeCard({ recipe }) {
     <div className="recipe-card">
       <div className="recipe-poster">
         <img 
-          src={`https://image.tmdb.org/t/p/w500${recipe.poster_path}`}
+          src={recipe.image}
           alt={recipe.title}
         />
       </div>
       <div className="recipe-info">
-        <h3 className="recipe-title">{recipe.title}</h3>
-        <div className="recipe-details">
-          <span className="recipe-rating">⭐ {recipe.vote_average}</span>
-          <span className="recipe-year">{recipe.release_date.substring(0, 4)}</span>
-        </div>
+        <h3 className="recipe-title">
+          <a href={`https://api.spoonacular.com/recipes/${recipe.id}/information`.sourceUrl}>
+            {recipe.title}
+          </a>
+        </h3>
         <button className={`favorite-button ${isFavorite ? 'favorited' : ''}`}
           onClick={toggleFavorite}>
             {isFavorite ? '♥ Remove from Favorites' : '♡ Add to Favorites'}
           </button>
-        <button className={`watchlist-button ${inWatchlist ? 'watchlisted' : ''}`}
-          onClick={handleWatchlistClick}>
-            {inWatchlist ? 'Remove from Watchlist' : 'Add To Watchlist'}
+        <button className={`cooklist-button ${inCookList ? 'cooklisted' : ''}`}
+          onClick={handleCookListClick}>
+            {inCookList ? 'Remove from Cook Later' : 'Add To Cook Later'}
           </button>
       </div>
     </div>
