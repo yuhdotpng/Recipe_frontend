@@ -4,7 +4,7 @@ function RecipeGrid({ recipes }) {
   return (
     <div className="recipe-grid">
       {recipes.map(recipe => (
-        <MovieCard key={recipe.id} recipe={recipe} />
+        <RecipeCard key={recipe.id} recipe={recipe} />
       ))}
     </div>
   );
