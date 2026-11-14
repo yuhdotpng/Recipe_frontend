@@ -10,4 +10,4 @@ function RecipeGrid({ recipes }) {
   );
 };
 
-export default MovieGrid;
+export default RecipeGrid;
