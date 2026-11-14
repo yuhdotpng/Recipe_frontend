@@ -1,4 +1,4 @@
-const API_KEY = import.meta.env.SPOONACULAR_API_KEY;
+const API_KEY = import.meta.env.VITE_SPOONACULAR_API_KEY;
 
 export async function getRecipes() {
   const response = await fetch(
