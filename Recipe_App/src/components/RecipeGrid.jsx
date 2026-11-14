@@ -1,4 +1,5 @@
 import RecipeCard from './RecipeCard';
+import './RecipeGrid.css'
 
 function RecipeGrid({ recipes }) {
   return (
