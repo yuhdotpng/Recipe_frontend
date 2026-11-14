@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Header.css'
 
 function Header() {
 const handleLogout = () => {
@@ -9,26 +10,12 @@ const handleLogout = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <Link to="/" className="app-title">MovieShelf</Link>
+        <Link to="/" className="app-title">Placeholder Name</Link>
         <nav className="nav-links">
-          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/recipes" className="nav-link">Recipes</Link>
           <Link to="/favorites" className="nav-link">Favorites</Link>
-          <div className="nav-user">
-          <div className="auth-section">
-          {isAuthenticated ? (
-            <div className="user-info">
-              <span className="username"> Placeholder Username </span>
-              <button onClick={handleLogout} className="logout-button">
-                Logout
-              </button>
-            </div>
-          ) : (
-            <Link to="/login" className="login-link">
-              Login
-            </Link>
-          )}
-        </div>
-        </div>
+          <Link to="/cooklist" className="nav-link">Cook Later</Link>
+          {/* NEED TO ADD USER AUTH*/}
         </nav>
       </div>
     </header>
