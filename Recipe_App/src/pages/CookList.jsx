@@ -13,7 +13,7 @@ function CookList() {
     <main className="main-content">
       <div className="content-header">
         <h2>My Cook List</h2>
-        <p>Recipes you plan to Cook</p>
+        <p>Recipes you plan to cook</p>
       </div>
       {cookList.length > 0 ? (
         <RecipeGrid recipes={cookList} />
