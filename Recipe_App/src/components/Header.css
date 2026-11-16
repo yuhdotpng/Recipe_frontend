@@ -1,7 +1,7 @@
 .header {
-  background-color: #1e1e1e;
+  background-color: #EDEDED;
   padding: 1rem 2rem;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #E0E0E0;
 }
 
 .header-content {
@@ -17,8 +17,7 @@
 .app-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #e50914;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #82AC04;
   text-decoration: none;
 }
 
@@ -28,7 +27,7 @@
 }
 
 .nav-link {
-  color: #ffffff;
+  color: #13190B;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
@@ -38,5 +37,5 @@
 }
 
 .nav-link:hover {
-  background-color: #333;
+  background-color: #82AC04;
 }
