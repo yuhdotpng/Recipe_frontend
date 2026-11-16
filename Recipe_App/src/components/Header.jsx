@@ -10,7 +10,7 @@ const handleLogout = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <Link to="/" className="app-title">Placeholder Name</Link>
+        <Link to="/" className="app-title">Reciparty</Link>
         <nav className="nav-links">
           <Link to="/recipes" className="nav-link">Recipes</Link>
           <Link to="/favorites" className="nav-link">Favorites</Link>
