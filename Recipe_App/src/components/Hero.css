@@ -1,10 +1,12 @@
 .hero-card {
   position: relative;
   text-align: center;
-  color: white;
+  color: #EDEDED;
+  
 }
 .hero-card img{
-    filter :brightness(50%)
+    filter :brightness(90%);
+    width: 100vw
 }
 
 .hero-text {
@@ -12,16 +14,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #13190B
 }
 
 .hero-text h2{
-    color: white
+    color: #13190B;
+    font-size: 30px
 }
 
 button {
-  background-color: #f59e0d;
+  background-color: #EBB11E;
   border: none;
-  color: #262626;
+  color: #13190B;
   padding: 2%;
   text-align: center;
   text-decoration: none;
